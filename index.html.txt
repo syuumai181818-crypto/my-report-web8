@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>My Creative Page</title>
+    <style>
+        /* CSS: デザインを整える */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        h1 { color: #333; }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover { background-color: #0056b3; }
+        #message { margin-top: 20px; font-weight: bold; color: #28a745; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Hello World!</h1>
+        <p>これはHTML/CSS/JSで作成したページです。</p>
+        <button id="btn">ここをクリック！</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        // JavaScript: 動きをつける
+        const btn = document.getElementById('btn');
+        const msg = document.getElementById('message');
+        
+        btn.addEventListener('click', () => {
+            msg.textContent = '🎉 素晴らしい！JavaScriptが動作しました。';
+            btn.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
