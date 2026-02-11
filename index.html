@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Page</title>
+    <style>
+        /* CSS: デザインを整える */
+        body { font-family: 'Helvetica', sans-serif; margin: 0; background: #f4f4f4; text-align: center; }
+        header { background: #333; color: white; padding: 2rem; }
+        .container { padding: 2rem; }
+        .card { background: white; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        button { padding: 10px 20px; font-size: 1rem; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 5px; }
+        #message { margin-top: 1rem; font-weight: bold; color: #d9534f; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Page</h1>
+        <p>大学の課題：HTML/CSS/JSの練習</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>趣味の紹介</h2>
+            <p>私は**バイク**に乗ることや、**陸上競技**（走ること・観ること）が大好きです。</p>
+            <p>最近は格闘ゲーム（ストリートファイター6など）にもハマっています！</p>
+        </div>
+
+        <div class="card">
+            <h2>インタラクティブ機能</h2>
+            <p>下のボタンを押すと、JavaScriptでメッセージが表示されます。</p>
+            <button onclick="showMessage()">ここをクリック！</button>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript: 動きをつける
+        function showMessage() {
+            const msgs = [
+                "フルスロットルで頑張りましょう！",
+                "自己ベスト更新を目指して！",
+                "昇竜拳！入力成功です。"
+            ];
+            const randomMsg = msgs[Math.floor(Math.random() * msgs.length)];
+            document.getElementById('message').innerText = randomMsg;
+        }
+    </script>
+</body>
+</html>
